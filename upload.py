@@ -31,7 +31,7 @@ if __name__ == '__main__':
     target = args.target
 
     config = Configurator()
-    config.add_route('up', '/up')
+    config.add_route('up', '/')
     config.add_view(upload_and_extract, route_name='up')
     app = config.make_wsgi_app()
     server = make_server('0.0.0.0', args.port, app)
